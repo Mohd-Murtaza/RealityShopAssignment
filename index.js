@@ -20,6 +20,10 @@ function findFirstUniqueChar(str) {
   return -1;
 }
 
+app.get('/', (req,res)=>{
+  res.status(200).json("this is home page!");
+})
+
 app.post('/first-unique-character', (req, res) => {
     try {
       const { text_to_process } = req.body;
